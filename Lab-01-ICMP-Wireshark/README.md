@@ -59,11 +59,11 @@ Kali Linux (192.168.1.7) generated ICMP traffic toward Windows 10 (192.168.1.4) 
 
 ### Echo Request
 
-![Echo Request](capturas/echo_type8request.png)
+![Echo Request](capturas/type8request.png)
 
 ### Echo Reply
 
-![Echo Reply](capturas/echo_type8reply.png)
+![Echo Reply](capturas/type8reply.png)
 
 ---
 
