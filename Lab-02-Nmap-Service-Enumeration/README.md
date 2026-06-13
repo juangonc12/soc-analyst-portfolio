@@ -67,31 +67,31 @@ An advanced scan was executed to gather additional information about services, c
 
 ### Connectivity Verification
 
-![Kali Linux to Windows Ping](screenshots/01-ping-kali-windows.png)
+![Kali Linux to Windows Ping](capturas/01-ping-kali-windows.png)
 
-![Windows to Kali Linux Ping](screenshots/02-ping-windows-kali.png)
+![Windows to Kali Linux Ping](capturas/02-ping-windows-kali.png)
 
 ### Host Discovery
 
-![Host Discovery](screenshots/03-host-discovery.png)
+![Host Discovery](capturas/03-host-discovery.png)
 
 ### Basic Port Scan
 
-![Basic Port Scan](screenshots/04-basic-port-scan.png)
+![Basic Port Scan](capturas/04-basic-scan.png)
 
 ### Service Enumeration
 
-![Service Enumeration](screenshots/05-service-enumeration.png)
+![Service Enumeration](capturas/05-service-enumeration.png)
 
 ### Operating System Detection
 
-![Operating System Detection](screenshots/06-os-detection.png)
+![Operating System Detection](capturas/06-os-detection.png)
 
 ### Aggressive Scan
 
-![Aggressive Scan Part 1](screenshots/07-aggressive-scan-part1.png)
+![Aggressive Scan Part 1](capturas/07-agressive-scan-1.png)
 
-![Aggressive Scan Part 2](screenshots/08-aggressive-scan-part2.png)
+![Aggressive Scan Part 2](capturas/08-agressive-scan-2.png)
 
 ---
 
