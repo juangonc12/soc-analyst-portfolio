@@ -72,14 +72,14 @@ GitHub
 | MITRE ATT&CK Mapping |     ✔ |
 
 
-┌───────────────────────────────────────────┐
-│                                           │
-│          SOC ANALYST PORTFOLIO            │
-│                                           │
-│ Threat Detection • Incident Response      │
-│ Network Analysis • Digital Forensics      │
-│                                           │
-└───────────────────────────────────────────┘
+```text
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                         SOC ANALYST PORTFOLIO                               │
+│                                                                              │
+│        Threat Detection • Incident Response • Network Analysis               │
+│                     Digital Forensics • Security Monitoring                  │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
 
 ## Current Goals
 
