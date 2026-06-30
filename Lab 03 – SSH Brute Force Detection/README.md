@@ -57,7 +57,7 @@ Ensure the SSH service is installed and running.
 Screenshot:
 
 ```
-Screenshots/step1_ssh_service.png
+capturas/Verificacion_servicio_SSH.png
 ```
 
 ---
@@ -69,7 +69,7 @@ Display the server IP address.
 Screenshot:
 
 ```
-Screenshots/step2_server_ip.png
+capturas/IP_Servidor.png
 ```
 
 ---
@@ -89,7 +89,7 @@ Repeat using multiple usernames.
 Screenshot:
 
 ```
-Screenshots/step3_failed_login.png
+capturas/Generacion_ataque.png
 ```
 
 ---
@@ -105,7 +105,7 @@ sudo grep "Failed password" /var/log/auth.log
 Screenshot:
 
 ```
-Screenshots/step4_auth_log.png
+capturas/Revision_registros.png
 ```
 
 ---
@@ -121,7 +121,7 @@ sudo grep "Failed password" /var/log/auth.log | wc -l
 Screenshot:
 
 ```
-Screenshots/step5_attempt_count.png
+capturas/Conteo_eventos.png
 ```
 
 ---
@@ -133,7 +133,7 @@ Locate the attacking IP address.
 Screenshot:
 
 ```
-Screenshots/step6_attacker_ip.png
+capturas/IP_atacante.png
 ```
 
 ---
@@ -197,6 +197,6 @@ Lab-03-SSH-Brute-Force-Detection/
 
 ## Author
 
-Juan González
+Juan Pablo González
 
 SOC Analyst Portfolio
