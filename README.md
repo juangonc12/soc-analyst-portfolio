@@ -74,7 +74,7 @@ GitHub
 
 ```text
 ┌──────────────────────────────────────────────────────────────────────────────┐
-│                         SOC ANALYST PORTFOLIO                               │
+│                         SOC ANALYST PORTFOLIO                                │
 │                                                                              │
 │        Threat Detection • Incident Response • Network Analysis               │
 │                     Digital Forensics • Security Monitoring                  │
