@@ -57,7 +57,7 @@ Ensure the SSH service is installed and running.
 Screenshot:
 
 ```
-capturas/Verificacion_servicio_SSH.png
+capturas/verificacion-servicio-ssh.png
 ```
 
 ---
@@ -69,7 +69,7 @@ Display the server IP address.
 Screenshot:
 
 ```
-capturas/IP_Servidor.png
+capturas/ip-servidor.png
 ```
 
 ---
@@ -89,7 +89,7 @@ Repeat using multiple usernames.
 Screenshot:
 
 ```
-capturas/Generacion_ataque.png
+capturas/generacion-ataque.png
 ```
 
 ---
@@ -105,7 +105,7 @@ sudo grep "Failed password" /var/log/auth.log
 Screenshot:
 
 ```
-capturas/Revision_registros.png
+capturas/revision-registros.png
 ```
 
 ---
@@ -121,7 +121,7 @@ sudo grep "Failed password" /var/log/auth.log | wc -l
 Screenshot:
 
 ```
-capturas/Conteo_eventos.png
+capturas/conteo-eventos.png
 ```
 
 ---
@@ -133,7 +133,7 @@ Locate the attacking IP address.
 Screenshot:
 
 ```
-capturas/IP_atacante.png
+capturas/ip-atacante.png
 ```
 
 ---
