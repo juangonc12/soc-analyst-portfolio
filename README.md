@@ -19,6 +19,8 @@ This portfolio showcases practical cybersecurity labs focused on developing the 
 
 Each project emphasizes hands-on investigation, documentation, and security analysis using industry-relevant tools.
 
+## Laboratories List
+
 | Lab    | Topic                     | Skills            | Status |
 | ------ | ------------------------- | ----------------- | ------ |
 | Lab 01 | ICMP Traffic Analysis     | Wireshark, ICMP   | ✅      |
@@ -27,6 +29,7 @@ Each project emphasizes hands-on investigation, documentation, and security anal
 | Lab 04 | Wazuh SIEM Detection      | Wazuh             | 🚧     |
 | Lab 05 | Sysmon Investigation      | Windows Logs      | 🚧     |
 
+## Roadmap
 
 ✔ ICMP Traffic Analysis
 ✔ Nmap Service Enumeration
@@ -39,23 +42,18 @@ Each project emphasizes hands-on investigation, documentation, and security anal
 ⬜ Malware Traffic Analysis
 ⬜ Incident Response
 
+## Tecnologies
+
 Linux
-
 Windows
-
 Wireshark
-
 Nmap
-
 Kali Linux
-
 Ubuntu
-
 VirtualBox
-
-Git
-
 GitHub
+
+## Statistics
 
 | Metric               | Value |
 | -------------------- | ----: |
