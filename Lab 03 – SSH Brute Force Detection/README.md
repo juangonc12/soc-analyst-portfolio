@@ -56,9 +56,9 @@ Ensure the SSH service is installed and running.
 
 Screenshot:
 
-```
+
 capturas/verificacion-servicio-ssh.png
-```
+
 
 ---
 
@@ -68,9 +68,9 @@ Display the server IP address.
 
 Screenshot:
 
-```
+
 capturas/ip-servidor.png
-```
+
 
 ---
 
@@ -78,9 +78,9 @@ capturas/ip-servidor.png
 
 From Kali Linux:
 
-```
+
 ssh admin@<Target-IP>
-```
+
 
 Enter an incorrect password several times.
 
@@ -88,9 +88,8 @@ Repeat using multiple usernames.
 
 Screenshot:
 
-```
+
 capturas/generacion-ataque.png
-```
 
 ---
 
@@ -98,15 +97,15 @@ capturas/generacion-ataque.png
 
 Execute:
 
-```
+
 sudo grep "Failed password" /var/log/auth.log
-```
+
 
 Screenshot:
 
-```
+
 capturas/revision-registros.png
-```
+
 
 ---
 
@@ -114,15 +113,15 @@ capturas/revision-registros.png
 
 Execute:
 
-```
+
 sudo grep "Failed password" /var/log/auth.log | wc -l
-```
+
 
 Screenshot:
 
-```
+
 capturas/conteo-eventos.png
-```
+
 
 ---
 
@@ -132,9 +131,9 @@ Locate the attacking IP address.
 
 Screenshot:
 
-```
+
 capturas/ip-atacante.png
-```
+
 
 ---
 
