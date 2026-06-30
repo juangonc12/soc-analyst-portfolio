@@ -45,12 +45,19 @@ Each project emphasizes hands-on investigation, documentation, and security anal
 ## Tecnologies
 
 Linux
+
 Windows
+
 Wireshark
+
 Nmap
+
 Kali Linux
+
 Ubuntu
+
 VirtualBox
+
 GitHub
 
 ## Statistics
