@@ -23,11 +23,11 @@ Each project emphasizes hands-on investigation, documentation, and security anal
 
 | Lab    | Topic                     | Skills            | Status |
 | ------ | ------------------------- | ----------------- | ------ |
-| Lab 01 | ICMP Traffic Analysis     | Wireshark, ICMP   | ✅      |
-| Lab 02 | Nmap Service Enumeration  | Nmap, Enumeration | ✅      |
-| Lab 03 | SSH Brute Force Detection | Linux Logs, SSH   | ✅      |
-| Lab 04 | Wazuh SIEM Detection      | Wazuh             | 🚧     |
-| Lab 05 | Sysmon Investigation      | Windows Logs      | 🚧     |
+| Lab 01 | ICMP Traffic Analysis     | Wireshark, ICMP   | ✅     |
+| Lab 02 | Nmap Service Enumeration  | Nmap, Enumeration | ✅     |
+| Lab 03 | SSH Brute Force Detection | Linux Logs, SSH   | ✅     |
+| Lab 04 | Sysmon Investigation      | Windows Logs      | 🚧     |
+| Lab 05 | Wazuh SIEM Detection      | Wazuh             | 🚧     |
 
 ## Roadmap
 
