@@ -26,7 +26,7 @@ Each project emphasizes hands-on investigation, documentation, and security anal
 | Lab 01 | ICMP Traffic Analysis     | Wireshark, ICMP   | ✅     |
 | Lab 02 | Nmap Service Enumeration  | Nmap, Enumeration | ✅     |
 | Lab 03 | SSH Brute Force Detection | Linux Logs, SSH   | ✅     |
-| Lab 04 | Sysmon Investigation      | Windows Logs      | 🚧     |
+| Lab 04 | Sysmon Investigation      | Windows Logs      | ✅     |
 | Lab 05 | Wazuh SIEM Detection      | Wazuh             | 🚧     |
 
 ## Roadmap
@@ -34,9 +34,9 @@ Each project emphasizes hands-on investigation, documentation, and security anal
 ✔ ICMP Traffic Analysis
 ✔ Nmap Service Enumeration
 ✔ SSH Brute Force Detection
-⬜ Sysmon Event Analysis
+✔ Sysmon Event Analysis
 ⬜ Wazuh SIEM Alerts
-⬜ Windows Event Logs
+✔ Windows Event Logs
 ⬜ Splunk Detection
 ⬜ Phishing Investigation
 ⬜ Malware Traffic Analysis
@@ -96,3 +96,5 @@ LinkedIn https://www.linkedin.com/in/juan-pablo-gonz%C3%A1lez-castro-a97999229/
 GitHub https://github.com/juangonc12
 
 Email juangonc12@gmail.com
+
+**Juan Pablo González**
