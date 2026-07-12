@@ -6,7 +6,7 @@ This repository documents my continuous learning journey through practical labs 
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/juangonc12/soc-analyst-portfolio)
 ![GitHub repo size](https://img.shields.io/github/repo-size/juangonc12/soc-analyst-portfolio)
-![Labs](https://img.shields.io/badge/Labs-3-success)
+![Labs](https://img.shields.io/badge/Labs-4-success)
 ![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux-blue)
 ![Virtualization](https://img.shields.io/badge/VirtualBox-Lab-orange)
 ![Status](https://img.shields.io/badge/Status-Active-success)
