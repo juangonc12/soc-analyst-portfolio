@@ -64,10 +64,10 @@ GitHub
 
 | Metric               | Value |
 | -------------------- | ----: |
-| Labs Completed       |     3 |
+| Labs Completed       |     4 |
 | Operating Systems    |     3 |
-| Security Tools       |     8 |
-| Reports Written      |     3 |
+| Security Tools       |     9 |
+| Reports Written      |     4 |
 | IOC Analysis         |     ✔ |
 | MITRE ATT&CK Mapping |     ✔ |
 
