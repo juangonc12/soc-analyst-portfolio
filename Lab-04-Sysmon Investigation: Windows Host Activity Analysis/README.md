@@ -100,15 +100,15 @@ Analyze the following events:
 
 #### whoami.exe
 
-![whoami](capturas/eventid1-whoami.png)
+![whoami](capturas/whoami-exe.png)
 
 #### hostname.exe
 
-![hostname](capturas/eventid1-hostname.png)
+![hostname](capturas/hostname-exe.png)
 
 #### ipconfig.exe
 
-![ipconfig](capturas/eventid1-systeminfo.png)
+![ipconfig](capturas/systeminfo-exe.png)
 
 ---
 
@@ -118,7 +118,7 @@ Review **Event ID 3 (Network Connection)** to identify outbound communications g
 
 ### Screenshot
 
-![Event ID 3](capturas/eventid3-networkconnection.png)
+![Event ID 3](capturas/eventid3.png)
 
 ---
 
@@ -128,7 +128,7 @@ Review **Event ID 22 (DNS Query)** to determine which domains were resolved by W
 
 ### Screenshot
 
-![Event ID 22](capturas/eventid22-dnsquery.png)
+![Event ID 22](capturas/eventid22.png)
 
 ---
 
