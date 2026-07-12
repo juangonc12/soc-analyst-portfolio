@@ -82,7 +82,7 @@ ipconfig
 
 ### Screenshot
 
-![Generate Activity](capturas/eventd1.png)
+![Generate Activity](capturas/eventid1.png)
 
 ---
 
