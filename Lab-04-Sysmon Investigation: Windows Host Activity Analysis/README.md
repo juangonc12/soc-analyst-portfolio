@@ -1,165 +1,207 @@
-# Lab 04 – Sysmon Investigation: Windows Host Activity Analysis
+# Lab 04 - Sysmon Windows Event Investigation
 
-## Overview
+## Objective
 
-This lab demonstrates how Sysmon can be used to monitor and investigate activity on a Windows endpoint. After deploying Sysmon with a community configuration, Windows Event Viewer was used to analyze process creation, network connections, and DNS queries generated during a simulated investigation.
-
-The objective was to understand how endpoint telemetry can be leveraged to reconstruct user activity and identify behaviors commonly observed during the reconnaissance phase of an attack.
+Deploy Sysmon on a Windows 10 virtual machine, generate endpoint activity, and investigate Windows Event Logs to identify process creation, network connections, and DNS queries commonly analyzed by SOC Analysts during endpoint investigations.
 
 ---
 
-## Objectives
+## Skills Demonstrated
 
-- Deploy Sysmon on a Windows 10 virtual machine.
-- Configure Sysmon using a community configuration file.
-- Generate Windows activity for analysis.
-- Investigate Sysmon logs using Event Viewer.
-- Identify Process Creation, Network Connection, and DNS Query events.
-- Relate collected evidence to MITRE ATT&CK techniques.
+- Windows Event Log Analysis
+- Sysmon Deployment
+- Endpoint Monitoring
+- Process Creation Investigation
+- Network Activity Analysis
+- DNS Query Investigation
+- Security Event Investigation
+- SOC Level 1 Analysis
 
 ---
 
 ## Lab Environment
 
 | Component | Description |
-|----------|-------------|
-| Host OS | Windows 11 Pro |
-| Virtualization | Oracle VirtualBox |
-| Guest OS | Windows 10 Pro |
+|-----------|-------------|
+| Host Machine | Windows 11 Pro |
+| Virtual Machine | Windows 10 Pro |
 | Monitoring Tool | Sysmon v15 |
 | Log Viewer | Windows Event Viewer |
+| Hypervisor | Oracle VM VirtualBox |
+
+---
+
+## Investigation Scenario
+
+A Windows workstation generated several security events that require investigation.
+
+As a SOC Analyst, the objective is to review Sysmon logs, identify executed processes, analyze network activity, and reconstruct user actions using endpoint telemetry collected during the investigation.
 
 ---
 
 ## Tools Used
 
+- Windows 10
 - Sysmon
 - Windows Event Viewer
-- PowerShell
 - Command Prompt (CMD)
-- VirtualBox
+- PowerShell
+- Oracle VM VirtualBox
 
 ---
 
-## Scenario
+# Step 1 – Install Sysmon
 
-A SOC analyst receives an alert indicating recent activity on a Windows workstation. The objective is to review the endpoint telemetry collected by Sysmon and reconstruct the actions performed by the user.
+Install Sysmon using the configuration file and verify that the service starts successfully.
 
-Several standard Windows commands were executed to simulate a basic host reconnaissance phase. The generated telemetry was then analyzed using Windows Event Viewer.
-
----
-
-## Activities Performed
-
-- Installed Windows 10 virtual machine.
-- Installed and configured Sysmon.
-- Verified Sysmon Operational logs.
-- Generated endpoint activity using:
-  - `whoami`
-  - `hostname`
-  - `ipconfig`
-- Investigated Process Creation events (Event ID 1).
-- Investigated Network Connection events (Event ID 3).
-- Investigated DNS Query events (Event ID 22).
-
----
-
-## Evidence
-
-### Sysmon Installation
-
-Sysmon was successfully installed and configured using the Sysmon Modular configuration file. After installation, the **Microsoft-Windows-Sysmon/Operational** log became available in Windows Event Viewer.
+### Screenshot
 
 ![Sysmon Installation](capturas/sysmon_installation.png)
 
 ---
 
-## Process Creation (Event ID 1)
+# Step 2 – Verify Sysmon Operational Log
 
-### User Discovery – whoami.exe
+Open Windows Event Viewer and verify that the **Microsoft-Windows-Sysmon/Operational** log is available.
 
-The execution of `whoami.exe` generated a Sysmon Event ID 1, recording the process creation along with its image path, Process GUID, Process ID, and execution timestamp.
+### Screenshot
 
-This command is commonly used during host reconnaissance to identify the current security context.
-
-![whoami](capturas/whoami-exe.png)
+![Sysmon Operational](capturas/sysmon-operational.png)
 
 ---
 
-### System Identification – hostname.exe
+# Step 3 – Generate Endpoint Activity
 
-Sysmon captured the execution of `hostname.exe`, allowing investigators to determine when the workstation name was queried.
+Execute the following Windows commands from Command Prompt to generate endpoint telemetry.
 
-This information is valuable during incident response because it helps correlate activity with a specific endpoint.
+```cmd
+whoami
+hostname
+ipconfig
+```
 
-![hostname](capturas/hostname-exe.png)
+### Screenshot
 
----
-
-### Network Configuration Discovery – ipconfig.exe
-
-Executing `ipconfig.exe` generated another Process Creation event.
-
-This command is frequently observed during the Discovery phase, as it reveals IP addressing, gateway information, and active network interfaces.
-
-![ipconfig](capturas/eventid1.png)
+![Generate Activity](capturas/eventd1.png)
 
 ---
 
-## Network Connection (Event ID 3)
+# Step 4 – Investigate Process Creation Events
 
-Sysmon detected outbound network activity generated by a Windows process.
+Review **Event ID 1 (Process Create)** generated by the executed commands.
 
-These events allow analysts to determine which processes establish external communications, supporting threat hunting and incident investigations.
+Analyze the following events:
 
-![Network Connection](capturas/eventid3.png)
+- whoami.exe
+- hostname.exe
+- ipconfig.exe
 
----
+### Screenshot
 
-## DNS Query (Event ID 22)
+#### whoami.exe
 
-Sysmon successfully recorded DNS resolution activity performed by Windows processes.
+![whoami](capturas/eventid1-whoami.png)
 
-DNS telemetry is particularly useful for identifying communications with suspicious domains and detecting potential command-and-control infrastructure.
+#### hostname.exe
 
-![DNS Query](capturas/eventid22.png)
+![hostname](capturas/eventid1-hostname.png)
 
-## Skills Demonstrated
+#### ipconfig.exe
 
-- Windows Endpoint Monitoring
-- Sysmon Deployment
-- Windows Event Logs Analysis
-- Event Correlation
-- Process Monitoring
-- DNS Monitoring
-- Network Activity Investigation
-- Endpoint Telemetry Analysis
-- Security Investigation
+![ipconfig](capturas/eventid1-systeminfo.png)
 
 ---
 
-## MITRE ATT&CK Mapping
+# Step 5 – Investigate Network Connection Events
+
+Review **Event ID 3 (Network Connection)** to identify outbound communications generated by Windows processes.
+
+### Screenshot
+
+![Event ID 3](capturas/eventid3-networkconnection.png)
+
+---
+
+# Step 6 – Investigate DNS Query Events
+
+Review **Event ID 22 (DNS Query)** to determine which domains were resolved by Windows processes.
+
+### Screenshot
+
+![Event ID 22](capturas/eventid22-dnsquery.png)
+
+---
+
+# Indicators of Compromise (IOCs)
+
+- Process creation events
+- Executed Windows reconnaissance commands
+- Network connections
+- DNS queries
+- Endpoint telemetry collected by Sysmon
+
+---
+
+# Findings
+
+- Sysmon successfully captured endpoint activity generated during the investigation.
+- Process Creation (Event ID 1) recorded the execution of Windows reconnaissance commands.
+- Network Connection (Event ID 3) provided visibility into outbound communications.
+- DNS Query (Event ID 22) identified domains accessed by Windows processes.
+- Windows Event Viewer enabled reconstruction of endpoint activity using Sysmon telemetry.
+
+---
+
+# Recommendations
+
+- Deploy Sysmon across Windows endpoints.
+- Maintain an updated Sysmon configuration.
+- Continuously monitor Event IDs related to process creation and network activity.
+- Correlate Sysmon logs with SIEM alerts.
+- Investigate unexpected process executions and suspicious DNS activity.
+
+---
+
+# MITRE ATT&CK Mapping
 
 | Technique | Description |
-|----------|-------------|
-| TA0007 – Discovery | System reconnaissance using Windows commands |
-| T1082 | System Information Discovery |
-| T1016 | System Network Configuration Discovery |
-| T1033 | System Owner/User Discovery |
-| TA0011 – Command and Control | DNS monitoring and network visibility |
+|-----------|-------------|
+| **T1033** | System Owner/User Discovery |
+| **T1082** | System Information Discovery |
+| **T1016** | System Network Configuration Discovery |
 
 ---
 
-## Key Findings
+# Repository Structure
 
-- Sysmon successfully captured endpoint telemetry.
-- Process creation events enabled reconstruction of executed commands.
-- Network Connection events provided visibility into outbound communications.
-- DNS Query events revealed domain resolution performed by Windows processes.
-- Event correlation allowed reconstruction of user activity during the investigation.
+```text
+Lab-04-Sysmon-Windows-Event-Investigation/
+│
+├── README.md
+├── Report/
+│   └── Lab04_Report.pdf
+│
+└── capturas/
+    ├── sysmon-instalacion.png
+    ├── sysmon-operational.png
+    ├── generacion-eventos-cmd.png
+    ├── eventid1-whoami.png
+    ├── eventid1-hostname.png
+    ├── eventid1-ipconfig.png
+    ├── eventid3-networkconnection.png
+    └── eventid22-dnsquery.png
+```
 
 ---
 
-## Conclusion
+# Conclusion
 
-This lab demonstrates how Sysmon enhances Windows endpoint visibility by collecting detailed security telemetry. Through the analysis of Process Creation, Network Connection, and DNS Query events, it was possible to reconstruct system activity and illustrate how these logs support incident response and threat hunting within a SOC environment.
+This laboratory demonstrated how Sysmon enhances endpoint visibility by recording detailed Windows security events. Through the investigation of Process Creation, Network Connection, and DNS Query events, it was possible to reconstruct endpoint activity and understand how endpoint telemetry supports incident response and threat hunting within a SOC environment.
+
+---
+
+## Author
+
+**Juan Pablo González**
+
+SOC Analyst Portfolio
