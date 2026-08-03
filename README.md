@@ -26,7 +26,7 @@ Each project emphasizes hands-on investigation, documentation, and security anal
 | Lab 02 | Nmap Service Enumeration  | Nmap, Enumeration | ✅     |
 | Lab 03 | SSH Brute Force Detection | Linux Logs, SSH   | ✅     |
 | Lab 04 | Sysmon Investigation      | Windows Logs      | ✅     |
-| Lab 05 | Wazuh SIEM Detection      | Wazuh             | ✅     |
+| Lab 05 | Failed Windows Login      | Windows Logs      | ✅     |
 
 ## Roadmap
 
