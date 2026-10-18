@@ -66,7 +66,7 @@ GitHub
 | Labs Completed       |     5 |
 | Operating Systems    |     3 |
 | Security Tools       |     9 |
-| Reports Written      |     4 |
+| Reports Written      |     5 |
 | IOC Analysis         |     ✔ |
 | MITRE ATT&CK Mapping |     ✔ |
 
