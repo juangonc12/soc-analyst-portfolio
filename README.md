@@ -63,7 +63,7 @@ GitHub
 
 | Metric               | Value |
 | -------------------- | ----: |
-| Labs Completed       |     4 |
+| Labs Completed       |     5 |
 | Operating Systems    |     3 |
 | Security Tools       |     9 |
 | Reports Written      |     4 |
